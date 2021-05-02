@@ -21,13 +21,4 @@ public class MyBinarySearchTree<K extends Comparable<K>> {
             current.right = addRecursively(current.right, key);
         return current;
     }
-
-    public int getSize() {
-        return this.getSizeRecursively(root);
-    }
-
-    private int getSizeRecursively(MyBinaryNode<K> root) {
-        return root == null ? 0 : 1 + this.getSizeRecursively(root.left) +
-                                      this.getSizeRecursively(root.right);
-    }
 }
